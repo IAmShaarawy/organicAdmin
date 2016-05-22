@@ -1,0 +1,12 @@
+<div>
+    <div >
+        <h1>Customers</h1>
+    </div>
+    <div ng-repeat="cust in customers">
+        <div class="well well-lg" ng-show="!custActive[$index]">
+            <button type="button" class="close pull-right" aria-label="Close" ng-click="removeCust(cust._id,$index)"><span aria-hidden="true">&times;</span></button>
+            <h2>Name: {{cust.firstName + ""+cust.lastName}}</h2>
+            <p><h4>Address</h4> {{cust.address}}</p>
+        </div>
+    </div>
+</div>

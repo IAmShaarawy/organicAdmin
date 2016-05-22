@@ -1,0 +1,42 @@
+<div   class="sample" layout="column" ng-cloak>
+    <md-content class="md-padding">
+        <md-tabs  md-selected="2" md-stretch-tabs="always" md-border-bottom md-dynamic-height >
+            <md-tab ng-repeat="tab in tabs"
+                    ng-disabled="tab.disabled"
+                    label="{{tab.category}}">
+                <form ng-submit="addPro(tab._id)">
+                    <input class="form-control" type="text" placeholder="New Product" ng-model="newPro.name"  required >
+                    <div class="form-inline">
+                        <input class=" form-control " type="number"  min="0" max="150" placeholder="Quantity" ng-model="newPro.qt" required style="width: 275px" >
+                        <input class="form-control " type="number"  min="2" max="1000" placeholder="Price/Kg" ng-model="newPro.price" required style="width: 275px">
+                        <input class="form-control " type="text" placeholder="Image name" ng-model="newPro.img_path" required style="width: 278px" >
+                    </div>
+                    <textarea class="form-control" placeholder="Specification" required ng-model="newPro.specs" ></textarea>
+                    <input type="submit" class="btn btn-success form-control" value="Add"  >
+                </form>
+                <hr>
+                <div class="demo-tab tab{{$index%4}}" style="padding: 25px;"
+                     ng-repeat="product in tab.products">
+
+                    <div class="row well well-lg"  >
+                        <div class="col-md-3 " >
+                            <img class=" img-thumbnail " ng-src="images/{{product.img_path}}" width="170px" >
+                        </div>
+                        <div class="col-md-5 "  >
+                            <h3>{{product.name}}</h3>
+                            <p  >{{product.specs}}</p>
+                        </div>
+                        <div class="col-md-3  ">
+                            <h2>{{product.qt}} Kg</h2>
+                            <hr>
+                            <h2>{{product.price | currency:"":2}} L.E</h2>
+                        </div >
+                        <div class="col-md-1 "  >
+                            <button type="button" class="close pull-right" aria-label="Close" ng-click=" removePro($parent.$index,tab._id,product._id,$index)"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                    </div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

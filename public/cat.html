@@ -1,0 +1,19 @@
+<div>
+    <div >
+        <h1>Categories</h1>
+        <form ng-submit="addCat()">
+            <input class="form-control" type="text" placeholder="New Category" ng-model="newCat.category"  required >
+            <input type="submit" class="btn btn-success form-control" value="Add"  >
+        </form>
+    </div>
+    <div ng-repeat="cat in categories | orderBy:category:true">
+        <div class="well well-lg" ng-show="!catActive[$index]">
+            <button type="button" class="close pull-right" aria-label="Close" ng-click="removeCat(cat._id,$index)"><span aria-hidden="true">&times;</span></button>
+            <h2>{{cat.category}}</h2>
+            <div ng-repeat="pro in cat.products">
+                    <span class="badge">{{pro.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+

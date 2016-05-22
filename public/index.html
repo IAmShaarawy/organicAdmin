@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organic Admin</title>
+    <script src="Vendors/angularjs-1.5.5/angular.min.js" ></script>
+    <script src="Vendors/angularjs-1.5.5/angular-route.min.js" ></script>
+    <script src="Vendors/angularjs-1.5.5/angular-resource.min.js" ></script>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+
+    <script src="javascripts/organicVApp.js"></script>
+
+    <link rel="stylesheet" href="Vendors/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/default.css">
+    <link rel="stylesheet" href="stylesheets/tab.css">
+    <link rel="stylesheet" href="stylesheets/fab.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+</head>
+<body  class="" ng-app="organicApp" >
+
+<nav class="navbar navbar-inverse navbar-fixed-top  " id="toastContainer">
+    <div class="container" >
+        <div class="navbar-header" >
+
+                <a class="navbar-brand" id="brand" href="#">Org<span class="glyphicon glyphicon-tree-deciduous " ></span>anc</a><small style="color: #4cae4c">Admin</small>
+        </div>
+        <div>
+            <ul class=" nav navbar-nav" >
+
+            </ul>
+            <ul class=" nav navbar-nav navbar-right">
+                <li><a href="#/cat" ng-show="authenticated" >Categories</a></li>
+                <li><a href="#/pro"   ng-show="authenticated" >Products</a></li>
+                <li><a href="#/cust"   ng-show="authenticated" >Customers</a></li>
+
+                <li class="dropdown" ng-show="authenticated" >
+
+                    <a href="" id="userLi" class="dropdown-toggle " data-toggle="dropdown"><img id="img-profile" class="img-circle" src="images/me.jpg"> {{current_user}} <span class="caret" ></span> </a>
+                    <ul class="dropdown-menu" >
+                        <li><a>My profile</a></li>
+                        <li ><a href="" ng-click="logout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid  ">
+    <div class="row">
+        <div class="col-lg-2   "   ></div>
+        <div class="col-lg-8 "  >
+            <div ng-view ></div>
+        </div>
+        <div class="col-lg-2  "  >
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="Vendors/jquery-1.12.3/jquery-1.12.3.min.js" ></script>
+<script src="Vendors/bootstrap-3.3.6-dist/js/bootstrap.min.js" ></script>
+</body>
+</html>

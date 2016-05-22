@@ -1,0 +1,85 @@
+
+.box{
+    border: 1px red dashed;
+}
+/*html{*/
+    /*height: 100%;*/
+/*}*/
+.container-fluid {
+    margin-top: 55px;
+    /*height: 100%;*/
+}
+
+#brand:hover{
+    color: #4cae4c;
+}
+
+#brand {
+
+    color: #9d9d9d;
+    padding: 5px;
+    margin: 0px;
+
+    font-size: xx-large;
+
+}
+
+#img-profile{
+    width: 40px;
+
+}
+
+#userLi{
+    padding: 5px;
+    margin: 0px;
+}
+ .inline{
+     display: inline;
+     font-size: 12px;
+ }
+.item{
+    width:inherit;
+    height:300px;
+    overflow:hidden;
+}
+.today_dishes{
+    min-width:100%;
+
+}
+
+.form-auth{
+    max-width: 330px;
+    padding: 5px;
+    margin: 0 auto;
+}
+ /*.mainContainer{*/
+     /*margin-left: 300px;*/
+ /*}*/
+
+/*.gradRight {*/
+
+    /*background: white; !* For browsers that do not support gradients *!*/
+    /*background: -webkit-linear-gradient(left, white , #D2EBCE); !* For Safari 5.1 to 6.0 *!*/
+    /*background: -o-linear-gradient(right, white, #D2EBCE); !* For Opera 11.1 to 12.0 *!*/
+    /*background: -moz-linear-gradient(right, white, #D2EBCE); !* For Firefox 3.6 to 15 *!*/
+    /*background: linear-gradient(to right, white , #D2EBCE); !* Standard syntax (must be last) *!*/
+    /*height: 100%;*/
+    /*min-height: 100%;*/
+    /*position: fixed;*/
+    /*width: inherit;*/
+/*}*/
+/*.gradLeft {*/
+
+    /*background: white; !* For browsers that do not support gradients *!*/
+    /*background: -webkit-linear-gradient(right, white , #D2EBCE); !* For Safari 5.1 to 6.0 *!*/
+    /*background: -o-linear-gradient(left, white, #D2EBCE); !* For Opera 11.1 to 12.0 *!*/
+    /*background: -moz-linear-gradient(left, white, #D2EBCE); !* For Firefox 3.6 to 15 *!*/
+    /*background: linear-gradient(to left, white , #D2EBCE); !* Standard syntax (must be last) *!*/
+    /*height: 100%;*/
+    /*min-height: 100%;*/
+    /*position: fixed;*/
+    /*width: inherit;*/
+/*}*/
+
+
+
